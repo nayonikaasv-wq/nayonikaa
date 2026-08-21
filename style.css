@@ -1,0 +1,412 @@
+/* ============================================================
+   HOW YOUR SITE LOOKS
+   DESG219 · Applied Programming for Creators
+
+   index.html holds the WORDS.
+   This file holds every decision about how they LOOK.
+
+   A CSS rule is always the same shape:
+
+       the-thing-you-are-styling {
+         property: value;
+       }
+
+   Change a value. Save. Refresh the page. Look.
+   That loop — change, save, look — is the whole job.
+
+   A COMMENT starts with a slash and a star, and ends with a
+   star and a slash. The browser ignores everything inside one.
+   That is also how you switch a rule OFF without deleting it.
+   ============================================================ */
+
+
+/* ============================================================
+   1 · THE CONTROL PANEL
+   ------------------------------------------------------------
+   Everything below is a setting used further down the file.
+   Change a value HERE and it updates everywhere at once.
+
+   This is the only section most of you will ever need.
+   Change these twelve things and you have a different website.
+   ============================================================ */
+
+:root {
+
+  /* ---- COLOUR ------------------------------------------- */
+
+  --paper:  #f2f0eb;   /* the page background                    */
+  --ink:    #1a1a1a;   /* the main text                          */
+  --soft:   #7a756c;   /* small grey text: dates, captions       */
+  --accent: #c0392b;   /* links and small highlights             */
+  --line:   #d9d4c8;   /* the thin dividing lines                */
+
+
+  /* ---- TYPE ---------------------------------------------- */
+
+  /* The typeface for headings and your name.
+     Try one of these by moving it to the front:
+       Georgia, "Times New Roman", serif
+       "Helvetica Neue", Helvetica, Arial, sans-serif
+       "Courier New", monospace
+       Impact, "Arial Black", sans-serif                        */
+  --font-display: Georgia, "Times New Roman", serif;
+
+  /* The typeface for ordinary paragraphs.
+     It is usually a good idea for this to be different from
+     the display face — but only a little different, or very. */
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --size-name:  3.2rem;   /* how big your name is. try 1.8, try 6  */
+  --size-body:  1.05rem;  /* how big the paragraphs are            */
+  --leading:    1.65;     /* space between lines. try 1.2, try 2.2 */
+
+  /* Space between letters in headings.
+     try 0.16em (airy)  ·  0 (normal)  ·  -0.04em (tight)         */
+  --tracking: -0.02em;
+
+  /* Should headings be shouted?
+     try uppercase  ·  lowercase  ·  none                          */
+  --heading-case: none;
+
+
+  /* ---- LAYOUT --------------------------------------------- */
+
+  --measure: 42rem;   /* how wide the column is. try 26rem, try 60rem */
+  --gap:     4rem;    /* vertical space between sections             */
+  --pad:     2rem;    /* breathing room at the edges of the screen   */
+
+  /* Where the header sits. try left · center · right              */
+  --align: left;
+
+  /* Rounded corners on images and boxes.
+     try 0 (hard)  ·  6px  ·  999px (fully round)                  */
+  --radius: 2px;
+
+
+  /* ---- THE TWO FUN ONES ----------------------------------- */
+
+  /* The dividing lines. Set to `none` to remove every line
+     on the page at once and see what that does.                  */
+  --rule: 1px solid var(--line);
+
+  /* A filter applied to every image.
+     try none  ·  grayscale(1)  ·  sepia(0.6)  ·  contrast(1.4)
+     ·  invert(1)  ·  saturate(2)                                  */
+  --img-filter: none;
+
+}
+
+
+/* ============================================================
+   2 · PRESETS
+   ------------------------------------------------------------
+   Five complete looks, already made.
+
+   TO USE ONE: delete the comment-opener on the line just above
+   it, and the comment-closer on the line just below it. That
+   switches it on.
+   the control panel, so it overrules whatever is up there.
+
+   Switch one on, look at it, switch it off, try the next.
+   Then go back to the control panel and make your own.
+
+   IMPORTANT: only ONE at a time. If you uncomment two, the
+   lower one wins and you will think the first one is broken.
+   ============================================================ */
+
+
+/*  ---------- PRESET A · BRUTALIST ----------
+:root {
+  --paper: #ffffff;  --ink: #000000;  --soft: #666666;
+  --accent: #0000ff; --line: #000000;
+  --font-display: "Courier New", monospace;
+  --font-body: "Courier New", monospace;
+  --size-name: 2.6rem;  --tracking: 0.02em;  --heading-case: uppercase;
+  --measure: 50rem;  --radius: 0;
+  --rule: 2px solid var(--line);
+  --img-filter: grayscale(1) contrast(1.5);
+}
+*/
+
+
+/*  ---------- PRESET B · NIGHT ----------
+:root {
+  --paper: #101014;  --ink: #e8e8ea;  --soft: #8a8a95;
+  --accent: #b8ff3d; --line: #2a2a33;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --size-name: 4rem;  --tracking: -0.04em;  --heading-case: none;
+  --measure: 38rem;  --radius: 8px;
+}
+*/
+
+
+/*  ---------- PRESET C · SWISS ----------
+:root {
+  --paper: #ffffff;  --ink: #111111;  --soft: #888888;
+  --accent: #e2231a; --line: #dddddd;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --size-name: 2.4rem;  --tracking: -0.03em;  --heading-case: uppercase;
+  --measure: 34rem;  --leading: 1.5;  --radius: 0;
+}
+*/
+
+
+/*  ---------- PRESET D · SOFT ----------
+:root {
+  --paper: #fdf6f0;  --ink: #3d3330;  --soft: #a3928a;
+  --accent: #d97757; --line: #ecdcd2;
+  --font-display: Georgia, serif;
+  --font-body: Georgia, serif;
+  --size-name: 3rem;  --tracking: 0;  --heading-case: lowercase;
+  --measure: 34rem;  --leading: 1.9;  --align: center;  --radius: 999px;
+}
+*/
+
+
+/*  ---------- PRESET E · POSTER ----------
+:root {
+  --paper: #f5e600;  --ink: #12100c;  --soft: #6b6510;
+  --accent: #12100c; --line: #12100c;
+  --font-display: Impact, "Arial Black", "Helvetica Neue", sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --size-name: 5.5rem;  --tracking: -0.05em;  --heading-case: uppercase;
+  --measure: 46rem;  --leading: 1.4;  --radius: 0;
+  --rule: 4px solid var(--line);
+  --img-filter: contrast(1.3) saturate(0.7);
+}
+*/
+
+
+/*  ---------- USING A REAL TYPEFACE ----------
+   Everything above uses fonts already on the computer.
+   To use one from Google Fonts instead:
+
+   1. Go to fonts.google.com and choose one
+   2. Copy the @import line it gives you
+   3. Paste it as the VERY FIRST LINE of this file — above
+      every comment, or it will be ignored
+   4. Put the font name at the front of --font-display
+
+   Example first line:
+   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+   Then:  --font-display: "Space Grotesk", sans-serif;
+   -------------------------------------------------------- */
+
+
+/* ============================================================
+   3 · THE RULES
+   ------------------------------------------------------------
+   This section uses the settings above. You do not have to
+   touch any of it — but read it, because it is short, and
+   because in three weeks you will want to change something
+   that isn't in the control panel.
+   ============================================================ */
+
+
+/* ---- Housekeeping. Makes sizes behave sensibly. ---- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- The page itself ---- */
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--leading);
+
+  max-width: var(--measure);   /* stops lines getting too long to read */
+  margin: 0 auto;              /* `auto` on both sides centres the column */
+  padding: var(--pad);
+}
+
+
+/* ---- The top of the page ---- */
+
+header {
+  text-align: var(--align);
+  padding-bottom: 2rem;
+  margin-bottom: var(--gap);
+  border-bottom: var(--rule);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--size-name);
+  line-height: 1.05;
+  letter-spacing: var(--tracking);
+  text-transform: var(--heading-case);
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  color: var(--soft);
+  font-size: 1rem;
+}
+
+nav {
+  margin-top: 1.4rem;
+}
+
+nav a {
+  margin-right: 1.2rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+
+/* ---- Headings inside the page ---- */
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: var(--tracking);
+  text-transform: var(--heading-case);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: var(--rule);
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: var(--tracking);
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ...except the first heading inside a work item, which
+   already has space above it from the item before. */
+article h3 {
+  margin-top: 0;
+}
+
+
+/* ---- Blocks of the page ---- */
+
+section {
+  margin-bottom: var(--gap);
+}
+
+article {
+  margin-bottom: 3rem;
+}
+
+/* The `+` means: a paragraph that comes directly after
+   another paragraph. This spaces them without spacing
+   the first one away from its heading. */
+p + p {
+  margin-top: 1rem;
+}
+
+
+/* ---- Small grey text: dates, captions ---- */
+
+.meta {
+  color: var(--soft);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+
+/* ---- Lists ---- */
+
+ul {
+  list-style: none;      /* no bullets. delete this line to get them back */
+  margin: 1rem 0;
+}
+
+li {
+  padding: 0.4rem 0;
+  border-bottom: var(--rule);
+}
+
+/* Contact links sit in a row rather than a stack */
+.links li {
+  display: inline-block;
+  margin-right: 1.4rem;
+  border-bottom: none;
+}
+
+
+/* ---- Links ---- */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+/* `:hover` means "while the mouse is over it" */
+a:hover {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+
+/* ---- Images ---- */
+
+img {
+  max-width: 100%;      /* never wider than the column, so phones work */
+  height: auto;         /* keeps the proportions correct              */
+  display: block;
+  border-radius: var(--radius);
+  filter: var(--img-filter);
+  margin-bottom: 1rem;
+}
+
+
+/* ---- The bottom of the page ---- */
+
+footer {
+  margin-top: var(--gap);
+  padding-top: 1.5rem;
+  border-top: var(--rule);
+  color: var(--soft);
+  font-size: 0.85rem;
+}
+
+
+/* ---- Phones ----
+   Everything inside this block only applies when the screen
+   is narrower than 600px. It shrinks your name so it doesn't
+   run off the edge. Change 600px to see where it kicks in. */
+
+@media (max-width: 600px) {
+  :root {
+    --size-name: 2.2rem;
+    --gap: 2.5rem;
+    --pad: 1.2rem;
+  }
+}
+
+
+/* ============================================================
+   4 · WHEN IT LOOKS WRONG
+   ------------------------------------------------------------
+   Plain black text on white, no styling at all
+       -> the file is not named exactly  style.css  (lowercase)
+       -> or the <link> line in index.html was changed
+
+   One change worked and the next one didn't
+       -> you probably deleted a  ;  or a  }
+          CSS ignores everything after a mistake, silently
+
+   A colour won't change
+       -> something further DOWN the file is overruling it.
+          The last rule wins. Check the presets in section 2.
+
+   Nothing changed at all
+       -> did you click "Commit changes" on GitHub?
+       -> then hard refresh: Ctrl+Shift+R  /  Cmd+Shift+R
+   ============================================================ */

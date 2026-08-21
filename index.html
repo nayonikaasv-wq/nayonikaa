@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+   YOUR PERSONAL WEBSITE
+   DESG219 · Applied Programming for Creators
+
+   There are only TWO files in this project:
+
+     index.html   <- you are here. The WORDS and the STRUCTURE.
+     style.css    <- how it LOOKS. Colours, type, spacing.
+
+   HOW TO USE THIS FILE
+   Look for placeholders written like this:   [[ YOUR NAME ]]
+   Every one of them is something for you to replace.
+   There are about 25 of them. Replace them all and the site
+   is yours. Add more sections whenever you have something to
+   put in them — this is a starting point, not a finished thing.
+
+   This grey block is a COMMENT — a note to yourself.
+   A comment opens with an angle bracket, an exclamation mark
+   and two dashes, and closes with two dashes and an angle
+   bracket. The browser ignores everything inside one.
+   They are all over this file, explaining what each part does.
+   Delete them once you no longer need them, or keep them.
+
+   YOU CANNOT BREAK THIS PERMANENTLY.
+   GitHub keeps every version. If you destroy this file, open it
+   on GitHub, click History, and copy an older version back.
+  ============================================================
+-->
+<html lang="en">
+
+<head>
+
+  <!-- Housekeeping. Leave these two lines alone. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- [[ YOUR NAME ]] — this is the text in the browser tab. -->
+  <title>[[ YOUR NAME ]]</title>
+
+  <!-- [[ ONE SENTENCE ABOUT YOU ]] — this is what Google shows,
+       and what appears when someone shares your link. -->
+  <meta name="description" content="[[ ONE SENTENCE ABOUT YOU ]]">
+
+  <!-- This connects the two files. Do not rename or delete it. -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<!-- ============================================================
+     THE TOP OF THE PAGE
+     ============================================================ -->
+
+<header>
+
+  <!-- Your name. This is the biggest thing on the page. -->
+  <h1>[[ YOUR NAME ]]</h1>
+
+  <!-- One line under your name. Not a job title — something true.
+       e.g. "Designer. Currently interested in maps and bad signage."
+            "Second year B.Des. I draw buildings that don't exist." -->
+  <p class="tagline">[[ ONE LINE ABOUT YOURSELF ]]</p>
+
+  <!-- Little links that jump down the page.
+       Delete any you don't want. Add more if you like. -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<main>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+
+<section id="about">
+
+  <h2>About</h2>
+
+  <!-- Two or three sentences. Write like you talk.
+       Nobody has ever enjoyed reading "I am a passionate
+       and creative individual seeking opportunities." -->
+  <p>[[ WHO YOU ARE. Where you study, what year, what you are
+     drawn to. Two or three sentences is plenty. ]]</p>
+
+  <p>[[ WHAT YOU ARE INTERESTED IN RIGHT NOW. This can change
+     every month. That is fine — it is a website, not a tattoo. ]]</p>
+
+  <!-- A short list. Change the heading and the items to anything:
+       skills, tools, obsessions, things you are learning. -->
+  <h3>[[ A LIST HEADING — e.g. "Currently learning" ]]</h3>
+  <ul>
+    <li>[[ ITEM ONE ]]</li>
+    <li>[[ ITEM TWO ]]</li>
+    <li>[[ ITEM THREE ]]</li>
+    <!-- To add another, copy one whole <li> line and paste it below. -->
+  </ul>
+
+</section>
+
+
+<!-- ============================================================
+     WORK
+     Each piece of work is one <article> block.
+     TO ADD A NEW ONE: copy everything from <article> to </article>
+     and paste the copy directly BELOW this comment, so the newest
+     work sits at the top.
+     ============================================================ -->
+
+<section id="work">
+
+  <h2>Work</h2>
+
+
+  <!-- ---------- WORK ITEM 1 ---------- -->
+  <article>
+
+    <h3>[[ TITLE OF THIS PIECE ]]</h3>
+
+    <!-- Small grey line: date, course, medium — whatever is useful. -->
+    <p class="meta">[[ DATE ]] · [[ WHAT IT IS — e.g. "Typography, studio project" ]]</p>
+
+    <!-- What is it, and what did you learn making it?
+         Be honest rather than impressive. In December you will be
+         glad you wrote down what was hard about it in August. -->
+    <p>[[ DESCRIBE THIS PIECE. What was the brief? What did you try
+       first that did not work? What are you pleased with? ]]</p>
+
+  </article>
+
+
+  <!-- ---------- WORK ITEM 2 · with an image ---------- -->
+  <article>
+
+    <h3>[[ TITLE OF THIS PIECE ]]</h3>
+    <p class="meta">[[ DATE ]] · [[ WHAT IT IS ]]</p>
+
+    <!-- TO PUT AN IMAGE HERE:
+
+         1. In your repository click "Add file" then "Upload files"
+         2. Drag your picture in, then click "Commit changes"
+         3. Delete the two dashes and angle bracket at the START
+            of the next line, and the ones at the END of it,
+            so the browser stops ignoring it
+         4. Change the filename to match yours EXACTLY, including
+            capital letters and the .jpg or .png ending
+
+         The "alt" text describes the image for someone who cannot
+         see it. Write a real description, not "image".            -->
+
+    <!-- <img src="[[ YOUR-IMAGE.jpg ]]" alt="[[ DESCRIBE WHAT THE IMAGE SHOWS ]]"> -->
+
+    <p class="meta">[[ Your image goes here — see the note above. ]]</p>
+
+    <p>[[ DESCRIBE THIS PIECE. ]]</p>
+
+  </article>
+
+
+  <!-- ---------- WORK ITEM 3 · text only ---------- -->
+  <article>
+
+    <h3>[[ TITLE OF THIS PIECE ]]</h3>
+    <p class="meta">[[ DATE ]] · [[ WHAT IT IS ]]</p>
+    <p>[[ DESCRIBE THIS PIECE. ]]</p>
+
+    <!-- A link out to something — a PDF, a video, another site.
+         Delete this line if you don't need it. -->
+    <p><a href="[[ https://... ]]">[[ LINK TEXT — e.g. "See the full project" ]]</a></p>
+
+  </article>
+
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+
+<section id="contact">
+
+  <h2>Contact</h2>
+
+  <p>[[ HOW SHOULD PEOPLE REACH YOU? One line. ]]</p>
+
+  <ul class="links">
+    <!-- The bit after href=" is where the link GOES.
+         The bit between > and < is what people SEE. -->
+    <li><a href="mailto:[[ YOUR@EMAIL.COM ]]">[[ YOUR@EMAIL.COM ]]</a></li>
+    <li><a href="https://instagram.com/[[ USERNAME ]]">Instagram</a></li>
+    <li><a href="https://github.com/[[ USERNAME ]]">GitHub</a></li>
+    <!-- Delete any line you don't want. Copy one to add another. -->
+  </ul>
+
+</section>
+
+</main>
+
+
+<!-- ============================================================
+     THE BOTTOM OF THE PAGE
+     ============================================================ -->
+
+<footer>
+  <p>[[ YOUR NAME ]] · [[ YEAR ]]</p>
+  <p class="meta">Made from scratch in HTML and CSS.</p>
+</footer>
+
+
+</body>
+</html>
