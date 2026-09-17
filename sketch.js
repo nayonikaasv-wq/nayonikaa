@@ -12,6 +12,8 @@ let N = 20
 
 function setup() {
   createCanvas(W, H);
+  let cnv = createCanvas(500, 500);
+  cnv.parent('sketch-holder');  
   noLoop(); 
 }
 
